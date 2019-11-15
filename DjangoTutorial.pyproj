@@ -5,6 +5,7 @@
     <RootNamespace>DjangoTutorial</RootNamespace>
     <InterpreterId>
     </InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -36,12 +37,26 @@
     <Compile Include="DjangoTutorial\settings.py" />
     <Compile Include="DjangoTutorial\urls.py" />
     <Compile Include="DjangoTutorial\wsgi.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="requirements.txt" />
+    <Compile Include="polls\admin.py" />
+    <Compile Include="polls\apps.py" />
+    <Compile Include="polls\migrations\__init__.py" />
+    <Compile Include="polls\models.py" />
+    <Compile Include="polls\tests.py" />
+    <Compile Include="polls\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="polls\views.py" />
+    <Compile Include="polls\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DjangoTutorial\" />
+    <Folder Include="polls\" />
+    <Folder Include="polls\migrations\" />
+    <Folder Include="polls\templates\" />
+    <Folder Include="polls\templates\polls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="polls\templates\polls\index.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 

@@ -53,10 +53,14 @@
     <Folder Include="DjangoTutorial\" />
     <Folder Include="polls\" />
     <Folder Include="polls\migrations\" />
+    <Folder Include="polls\static\" />
+    <Folder Include="polls\static\polls\" />
+    <Folder Include="polls\static\polls\images\" />
     <Folder Include="polls\templates\" />
     <Folder Include="polls\templates\polls\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="polls\static\polls\style.css" />
     <Content Include="polls\templates\polls\detail.html" />
     <Content Include="polls\templates\polls\index.html" />
     <Content Include="polls\templates\polls\results.html" />
